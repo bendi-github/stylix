@@ -12,7 +12,7 @@ in
   config = lib.mkIf (config.stylix.enable && cfg.enable) {
     services.hyprpaper.settings = {
       preload = [ "${config.stylix.image}" ];
-      wallpaper = [ ",${config.stylix.image}" ];
+      wallpaper = [ "${config.stylix.image}" ];
     };
   };
 }
